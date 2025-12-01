@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="128" height="128" rx="16" fill="url(#grad)"/>
+  
+  <!-- Table representation -->
+  <g fill="#ffffff">
+    <!-- Header row -->
+    <rect x="20" y="25" width="88" height="12" rx="2" opacity="0.95"/>
+    
+    <!-- Data rows -->
+    <rect x="20" y="42" width="88" height="10" rx="1" opacity="0.8"/>
+    <rect x="20" y="56" width="88" height="10" rx="1" opacity="0.8"/>
+    <rect x="20" y="70" width="88" height="10" rx="1" opacity="0.8"/>
+    <rect x="20" y="84" width="88" height="10" rx="1" opacity="0.8"/>
+    <rect x="20" y="98" width="88" height="10" rx="1" opacity="0.8"/>
+    
+    <!-- Vertical lines to show columns -->
+    <line x1="50" y1="25" x2="50" y2="108" stroke="#2E7D32" stroke-width="2" opacity="0.6"/>
+    <line x1="78" y1="25" x2="78" y2="108" stroke="#2E7D32" stroke-width="2" opacity="0.6"/>
+  </g>
+</svg>
+

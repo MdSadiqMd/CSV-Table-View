@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      papaparse:
+        specifier: ^5.4.1
+        version: 5.5.3
     devDependencies:
       '@types/mocha':
         specifier: ^10.0.10
@@ -14,6 +18,9 @@ importers:
       '@types/node':
         specifier: 22.x
         version: 22.19.1
+      '@types/papaparse':
+        specifier: ^5.3.8
+        version: 5.5.0
       '@types/vscode':
         specifier: ^1.106.1
         version: 1.106.1
@@ -28,7 +35,7 @@ importers:
         version: 9.39.1
       ts-loader:
         specifier: ^9.5.4
-        version: 9.5.4(typescript@5.9.3)(webpack@5.103.0)
+        version: 9.5.4(typescript@5.9.3)(webpack@5.103.0(webpack-cli@6.0.1))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -154,6 +161,9 @@ packages:
 
   '@types/node@22.19.1':
     resolution: {integrity: sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==}
+
+  '@types/papaparse@5.5.0':
+    resolution: {integrity: sha512-GVs5iMQmUr54BAZYYkByv8zPofFxmyxUpISPb2oh8sayR3+1zbxasrOvoKiHJ/nnoq/uULuPsu1Lze1EkagVFg==}
 
   '@types/vscode@1.106.1':
     resolution: {integrity: sha512-R/HV8u2h8CAddSbX8cjpdd7B8/GnE4UjgjpuGuHcbp1xV6yh4OeqU4L1pKjlwujCrSFS0MOpwJAIs/NexMB1fQ==}
@@ -979,6 +989,9 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
+  papaparse@5.5.3:
+    resolution: {integrity: sha512-5QvjGxYVjxO59MGU2lHVYpRWBBtKHnlIAcSe1uNFCkkptUh63NFRj0FJQm7nR67puEruUci/ZkjmEFrjCAyP4A==}
+
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -1448,6 +1461,10 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
+  '@types/papaparse@5.5.0':
+    dependencies:
+      '@types/node': 22.19.1
+
   '@types/vscode@1.106.1': {}
 
   '@typescript-eslint/eslint-plugin@8.48.0(@typescript-eslint/parser@8.48.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3)':
@@ -1642,17 +1659,17 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
 
-  '@webpack-cli/configtest@3.0.1(webpack-cli@6.0.1)(webpack@5.103.0)':
+  '@webpack-cli/configtest@3.0.1(webpack-cli@6.0.1(webpack@5.103.0))(webpack@5.103.0(webpack-cli@6.0.1))':
     dependencies:
       webpack: 5.103.0(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.103.0)
 
-  '@webpack-cli/info@3.0.1(webpack-cli@6.0.1)(webpack@5.103.0)':
+  '@webpack-cli/info@3.0.1(webpack-cli@6.0.1(webpack@5.103.0))(webpack@5.103.0(webpack-cli@6.0.1))':
     dependencies:
       webpack: 5.103.0(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.103.0)
 
-  '@webpack-cli/serve@3.0.1(webpack-cli@6.0.1)(webpack@5.103.0)':
+  '@webpack-cli/serve@3.0.1(webpack-cli@6.0.1(webpack@5.103.0))(webpack@5.103.0(webpack-cli@6.0.1))':
     dependencies:
       webpack: 5.103.0(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.103.0)
@@ -2302,6 +2319,8 @@ snapshots:
 
   pako@1.0.11: {}
 
+  papaparse@5.5.3: {}
+
   parent-module@1.0.1:
     dependencies:
       callsites: 3.1.0
@@ -2468,7 +2487,7 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  terser-webpack-plugin@5.3.14(webpack@5.103.0):
+  terser-webpack-plugin@5.3.14(webpack@5.103.0(webpack-cli@6.0.1)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
@@ -2503,7 +2522,7 @@ snapshots:
     dependencies:
       typescript: 5.9.3
 
-  ts-loader@9.5.4(typescript@5.9.3)(webpack@5.103.0):
+  ts-loader@9.5.4(typescript@5.9.3)(webpack@5.103.0(webpack-cli@6.0.1)):
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.18.3
@@ -2558,9 +2577,9 @@ snapshots:
   webpack-cli@6.0.1(webpack@5.103.0):
     dependencies:
       '@discoveryjs/json-ext': 0.6.3
-      '@webpack-cli/configtest': 3.0.1(webpack-cli@6.0.1)(webpack@5.103.0)
-      '@webpack-cli/info': 3.0.1(webpack-cli@6.0.1)(webpack@5.103.0)
-      '@webpack-cli/serve': 3.0.1(webpack-cli@6.0.1)(webpack@5.103.0)
+      '@webpack-cli/configtest': 3.0.1(webpack-cli@6.0.1(webpack@5.103.0))(webpack@5.103.0(webpack-cli@6.0.1))
+      '@webpack-cli/info': 3.0.1(webpack-cli@6.0.1(webpack@5.103.0))(webpack@5.103.0(webpack-cli@6.0.1))
+      '@webpack-cli/serve': 3.0.1(webpack-cli@6.0.1(webpack@5.103.0))(webpack@5.103.0(webpack-cli@6.0.1))
       colorette: 2.0.20
       commander: 12.1.0
       cross-spawn: 7.0.6
@@ -2604,7 +2623,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.14(webpack@5.103.0)
+      terser-webpack-plugin: 5.3.14(webpack@5.103.0(webpack-cli@6.0.1))
       watchpack: 2.4.4
       webpack-sources: 3.3.3
     optionalDependencies:
