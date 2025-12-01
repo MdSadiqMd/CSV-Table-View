@@ -3,13 +3,13 @@
     "displayName": "CSV Table View",
     "description": "Beautiful, interactive CSV viewer with sticky headers, virtual scrolling, and search functionality",
     "version": "0.0.1",
-    "publisher": "your-publisher-name",
+    "publisher": "MdSadiqMd",
     "repository": {
         "type": "git",
         "url": "https://github.com/MdSadiqMd/CSV-Table-View"
     },
     "engines": {
-        "vscode": "^1.106.1"
+        "vscode": "^1.80.0"
     },
     "categories": [
         "Viewers",
@@ -47,32 +47,56 @@
             "editor/title": [
                 {
                     "command": "csv-table-view.preview",
-                    "when": "resourceExtname =~ /\\.(csv|tsv)$/",
+                    "when": "resourceExtname == .csv || resourceExtname == .tsv || resourceLangId == csv",
                     "group": "navigation"
                 }
             ],
             "editor/title/context": [
                 {
                     "command": "csv-table-view.preview",
-                    "when": "resourceExtname =~ /\\.(csv|tsv)$/",
+                    "when": "resourceExtname == .csv || resourceExtname == .tsv || resourceLangId == csv",
                     "group": "1_open"
                 }
             ],
             "explorer/context": [
                 {
                     "command": "csv-table-view.preview",
-                    "when": "resourceExtname =~ /\\.(csv|tsv)$/",
+                    "when": "resourceExtname == .csv || resourceExtname == .tsv",
                     "group": "navigation"
                 }
             ],
             "editor/context": [
                 {
                     "command": "csv-table-view.preview",
-                    "when": "resourceExtname =~ /\\.(csv|tsv)$/",
+                    "when": "resourceExtname == .csv || resourceExtname == .tsv || resourceLangId == csv",
                     "group": "1_open"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "csv-table-view.preview",
+                    "when": "true"
+                },
+                {
+                    "command": "csv-table-view.previewToSide",
+                    "when": "true"
                 }
             ]
         },
+        "keybindings": [
+            {
+                "command": "csv-table-view.preview",
+                "key": "cmd+k v",
+                "mac": "cmd+k v",
+                "when": "resourceExtname == .csv || resourceExtname == .tsv"
+            },
+            {
+                "command": "csv-table-view.previewToSide",
+                "key": "cmd+k cmd+v",
+                "mac": "cmd+k cmd+v",
+                "when": "resourceExtname == .csv || resourceExtname == .tsv"
+            }
+        ],
         "languages": [
             {
                 "id": "csv",

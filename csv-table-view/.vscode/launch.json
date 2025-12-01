@@ -9,7 +9,8 @@
             "type": "extensionHost",
             "request": "launch",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "${workspaceFolder}/test-data"
             ],
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
