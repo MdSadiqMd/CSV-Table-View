@@ -2,18 +2,21 @@
     "name": "csv-table-view",
     "displayName": "CSV Table View",
     "description": "Beautiful, interactive CSV viewer with sticky headers, virtual scrolling, and search functionality",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "MdSadiqMd",
     "repository": {
         "type": "git",
         "url": "https://github.com/MdSadiqMd/CSV-Table-View"
     },
     "engines": {
-        "vscode": "^1.80.0"
+        "vscode": "^1.106.0"
     },
     "categories": [
-        "Viewers",
+        "Machine Learning",
         "Data Science",
+        "AI",
+        "Education",
+        "Visualization",
         "Other"
     ],
     "keywords": [
@@ -23,7 +26,11 @@
         "viewer",
         "data"
     ],
-    "icon": "media/icon.svg",
+    "icon": "media/icon.png",
+    "galleryBanner": {
+        "color": "#4CAF50",
+        "theme": "dark"
+    },
     "activationEvents": [
         "*"
     ],
